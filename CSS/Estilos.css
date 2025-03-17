@@ -4,7 +4,7 @@ body {
     padding: 0;
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #6a11cb, #2575fc);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,31 +20,72 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
     animation: fadeIn 2s ease-in-out;
+    max-width: 800px;
+    margin: 20px;
 }
 
-/* Estilos del título */
 h1 {
-    font-size: 3rem;
-    margin: 0;
+    font-size: 3.5rem;
+    margin: 0 0 15px 0;
     text-transform: uppercase;
     letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
-/* Estilos del párrafo */
 p {
-    font-size: 1.5rem;
-    margin: 10px 0 0;
+    font-size: 1.4rem;
+    margin: 10px 0 30px;
     font-weight: 300;
+    line-height: 1.6;
 }
 
-/* Animación de entrada */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.values-container {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.values-container h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.value-item {
+    padding: 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+}
+
+.value-item i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #ffd700;
+    background: rgba(0,0,0,0.2);
+    padding: 15px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.value-item h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 400;
 }
